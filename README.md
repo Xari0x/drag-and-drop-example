@@ -1,6 +1,6 @@
 # `Drag & Drop Hotbar example`
 
-![screenshot|1090x232](https://github.com/Xari0x/drag-and-drop-hotbar-example/blob/main/screenshot.png?raw=true)
+![screenshot|1090x232](https://github.com/Xari0x/drag-and-drop-example/blob/main/screenshot.png?raw=true)
 
 > [!IMPORTANT]
 > `Drag & Drop Hotbar example` is an example that can be used as a basis for other projects. It uses `jQuery UI v1.14.1 & jQuery v3.7.1` as a local file.
