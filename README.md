@@ -10,11 +10,15 @@ This project was created on a personal basis for another inventory project on Fi
 > [!IMPORTANT]
 >The top part with the various “Rename” and “Use” buttons, as well as the clothes, is not functional on the demo, as it was made for the FiveM project, but it's easy enough to make it work the way you want.
 
+## DEMO
+
+**A demo is available at [jordqn.fr/drag-and-drop-example](https://jordqn.fr/drag-and-drop-example/).**
+
 ## USAGE
 
 1. Clone the project on your local computer.
 ```bash
-git clone https://github.com/Xari0x/drag-and-drop-hotbar-example.git
+git clone https://github.com/Xari0x/drag-and-drop-example.git
 ```
 2. Modify `script.js`, `style.scss` and `index.html` as required, depending on the use case.
 3. Compile the **SCSS** style file.
