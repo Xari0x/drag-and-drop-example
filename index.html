@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style-min.css">
+    <title>Inventory</title>
+</head>
+<body>
+    <input type="number" class="quantity" id="quantity"/>
+    <span class="title">Inventory</span>
+    <span class="title_storage">Chest</span>
+    <section class="hotbar" id="hotbar">
+        <!-- Delete the slots shown here, as they serve only as examples.  -->
+        <div class="slot" data-key="i_-1">
+            <div class="item" data-quantity=10000 id="cash">
+                <span class="name">Cash</span>
+                <img src="./items/money.png"/>
+                <span class="quantity">x10,000</span>
+            </div>
+        </div>
+        <div class="slot" data-key="i_-2">
+            <div class="item" data-quantity=5000 id="cash">
+                <span class="name">Cash</span>
+                <img src="./items/money.png"/>
+                <span class="quantity">x5,000</span>
+            </div>
+        </div>
+        <div class="slot" data-key="i_-3">
+            <div class="item" data-quantity=1 id="outfit">
+                <span class="name">Outfit</span>
+                <img src="./items/outfit.png"/>
+                <span class="quantity">x1</span>
+            </div>
+        </div>
+    </section>
+    <section class="storage" id="storage"></section>
+    <section class="components" id="components">
+        <div class="outfit" data-key="outfit">
+            
+        </div>
+        <div class="bag" data-key="bag">
+            
+        </div>
+        <div class="mask" data-key="mask">
+            
+        </div>
+    </section>
+    <section class="buttons" id="buttons">
+        <div class="btn">Use</div>
+        <div class="btn">Rename</div>
+    </section>
+</body>
+</html>

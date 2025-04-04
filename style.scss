@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: white;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-image: url("./background.jpg");
+        opacity: 1;
+        transition: .2s;
+
+        .hotbar{
+            height: 80px;
+            width: 100%;
+            position: absolute;
+            bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .components{
+            height: 80px;
+            position: absolute;
+            left: calc(50% + 193px);
+            bottom: 110px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .buttons{
+            height: 80px;
+            position: absolute;
+            left: calc(50% - 235px);
+            bottom: 110px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .storage{
+            height: 290px;
+            padding-top: 40px;
+            width: 650px;
+            position: absolute;
+            top: calc(50% - 180px);
+            left: calc(50% - 325px);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+            overflow: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+        }
+    }
+}
+
+.slot {
+    background-color: #3a3a3a54;
+    height: 80px;
+    width: 80px;
+    transition: .2s;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    border: 2px dashed transparent;
+}
+
+.outfit {
+    background-color: #3a3a3a54;
+    height: 80px;
+    width: 80px;
+    transition: .2s;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    border: 2px dashed transparent;
+    background-image: url('./items/placeholder_clothes.png');
+    background-size: contain;
+}
+.bag {
+    background-color: #3a3a3a54;
+    height: 80px;
+    width: 80px;
+    transition: .2s;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    border: 2px dashed transparent;
+    background-image: url('./items/placeholder_bag.png');
+    background-size: contain;
+}
+.mask {
+    background-color: #3a3a3a54;
+    height: 80px;
+    width: 80px;
+    transition: .2s;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    border: 2px dashed transparent;
+    background-image: url('./items/placeholder_mask.png');
+    background-size: contain;
+}
+
+.btn {
+    height: 80px;
+    width: 200px;
+    background-color: #3a3a3a54;
+    transition: .2s;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    font-family: 'Hanken Grotesk';
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff5d;
+    line-height: 125px;
+    border: 2px dashed transparent;
+}
+
+.ui-droppable-active {
+    border-color: white;
+    border: 2px dashed white;
+}
+
+.item {
+    height: 80px;
+    width: 80px;
+    font-family: 'Hanken Grotesk';
+    font-size: 13px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(54, 54, 54, 0.336);
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.085);
+    box-sizing: border-box;
+
+    .quantity {
+        position: absolute;
+        height: 15px;
+        text-align: center;
+        bottom: 5px;
+        right: 5px;
+        color: rgba(255, 255, 255, 0.589);
+        opacity: 0.2;
+        transition: .2s;
+    }
+
+    img {
+        height: 65px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        object-fit: contain;
+        transition: .2s;
+        scale: 0.8;
+    }
+
+    .name {
+        position: absolute;
+        background-color: rgb(73, 73, 73);
+        top: -30px;
+        color: rgba(255, 255, 255, 0.589);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 8px;
+        align-self: center;
+        height: 20px;
+        text-align: center;
+        opacity: 0;
+        white-space: nowrap;
+        transition: .2s;
+        z-index: 100;
+    }
+
+    &:hover {
+        .name {
+            opacity: 1;
+        }
+
+        .quantity {
+            opacity: 1;
+        }
+
+        img {
+            scale: 0.9;
+        }
+    }
+}
+
+input{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    left: calc(50% + 475px);
+    background-color: #3a3a3a54;
+    text-align: center;
+    transition: .2s;
+    color: rgba(255, 255, 255, 0.589);
+    font-family: 'Hanken Grotesk';
+    font-size: 15px;
+    z-index: 100;
+
+    &::before{
+        content: "x";
+    }
+
+    &:hover{
+        width: 90px;
+    }
+
+    &:focus{
+        width: 90px;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+}
+
+.title {
+    position: absolute;
+    bottom: 110px;
+    left: calc(50% - 463px);
+    font-family: 'Hanken Grotesk';
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.589);
+
+    &::before{
+        content: "";
+        width: 100px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.589);
+        position: absolute;
+        top: 25px;
+    }
+}
+
+.title_storage {
+    position: absolute;
+    top: calc(50% - 180px);
+    left: calc(50% - 325px);
+    font-family: 'Hanken Grotesk';
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.589);
+
+    &::before{
+        content: "";
+        width: 100px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.589);
+        position: absolute;
+        top: 25px;
+    }
+}
+
+.item[data-quantity="1"] {
+    .quantity{
+        visibility: hidden;
+    }
+    
+}
